@@ -11,5 +11,11 @@
 @interface ViewController : UIViewController
 
 
+
+
+-(IBAction)timeAttack ;
+-(IBAction)endless ;
+
+
 @end
 
