@@ -13,8 +13,7 @@
 
 
 
--(IBAction)timeAttack ;
--(IBAction)endless ;
+
 
 
 @end

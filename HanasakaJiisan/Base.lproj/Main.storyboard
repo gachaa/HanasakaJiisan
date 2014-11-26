@@ -22,7 +22,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="timeAttack" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rL0-11-8Ec"/>
+                                    <segue destination="v4w-4V-s0w" kind="modal" id="Pud-4j-7r1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3F-Pn-vUd">
@@ -30,9 +30,6 @@
                                 <state key="normal" title="endless">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="endless" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yUk-yy-2gY"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTh-Mb-CVt">
                                 <rect key="frame" x="137" y="442" width="30" height="30"/>
@@ -51,10 +48,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Endless View Controller-->
         <scene sceneID="WG8-ge-c3K">
             <objects>
-                <viewController id="5bH-DN-MJr" sceneMemberID="viewController">
+                <viewController id="5bH-DN-MJr" customClass="EndlessViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R4j-HX-J1M"/>
                         <viewControllerLayoutGuide type="bottom" id="wzf-zO-fNX"/>
@@ -70,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="554" y="548"/>
         </scene>
-        <!--View Controller-->
+        <!--Time View Controller-->
         <scene sceneID="QV7-Sd-SgZ">
             <objects>
-                <viewController id="v4w-4V-s0w" sceneMemberID="viewController">
+                <viewController id="v4w-4V-s0w" customClass="TimeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lEK-JD-PIP"/>
                         <viewControllerLayoutGuide type="bottom" id="a3w-sW-q6w"/>
@@ -81,9 +78,20 @@
                     <view key="view" contentMode="scaleToFill" id="4CL-Rb-ga9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="timelabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44L-a3-Aan">
+                                <rect key="frame" x="139" y="81" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="timeLabel" destination="44L-a3-Aan" id="n0Y-J6-4Oj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyx-bA-gJ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

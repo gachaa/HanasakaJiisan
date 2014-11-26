@@ -9,5 +9,25 @@
 #import <UIKit/UIKit.h>
 
 @interface TimeViewController : UIViewController
+{
+    IBOutlet UILabel *timeLabel ;
+    UILabel *countdown_label ;
+    
+
+    NSTimer *timer ;
+    float time ;
+    float countd ;
+    int countdown ;
+    
+    UIButton *startBt ;
+    
+    
+    int s ;
+    
+    IBOutlet UILabel *label ;
+}
+-(IBAction)start ;
+
+-(void)up ;
 
 @end
