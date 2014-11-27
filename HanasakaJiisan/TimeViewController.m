@@ -17,16 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    timer = [NSTimer scheduledTimerWithTimeInterval:0.01
-                                             target:self
-                                           selector:@selector(up)
-                                           userInfo:nil
-                                            repeats:YES
-             ];
+    
+    timeLabel.text = @"" ;
     
     
-    
-    
+    //MARK:StartButtonを作ってるよ
     startBt = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     startBt.center = CGPointMake(100,200);
     [startBt setTitle:@"start"
@@ -36,9 +31,7 @@
                 action:@selector(start)
       forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:startBt];
-    
-    timeLabel.text = @"" ;
-    
+
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -55,44 +48,71 @@
 }
 */
 
--(void)up{
-    if(s == 1){
-        countd += 0.01 ;
-        countdown = 4 - countd ;
-        if(countd <= 3){
-            countdown_label.text = [NSString stringWithFormat:@"%d",countdown];
-        }else if(3 < countd && countd <= 3.2){
-            countdown_label.text = @"すたーと！";
-        }else{
-            countdown_label.alpha = 0 ;
-            time = 10 ;
-            s = 2 ;
-        }
-    }else if(s == 2){
-        time = time - 0.01f ;
-        timeLabel.text = [NSString stringWithFormat:@"%.2f",time];
-        if(time < 0){
+
+-(void)start{
+    countdown = 4;
+    countdownLabel = [[UILabel alloc] initWithFrame:(CGRectMake(10, 10, 100, 100))];
+    countdownLabel.text = [NSString stringWithFormat:@"%D", countdown];
+    [self.view addSubview:countdownLabel];
+    
+    //タイマー1(3...2...1...のカウント)
+    timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDownFirst) userInfo:nil repeats:YES];
+    [timer fire];
+    startBt.hidden = YES;
+    
+}
+
+
+
+- (void)countDownFirst
+{
+    countdown = countdown - 1;
+    countdownLabel.text = [NSString stringWithFormat:@"%d", countdown];
+    
+    if (countdown <= 0 ) {
+        countdownLabel.text = @"スタート！！";
+        if (countdown <= -1) {
+            countdownLabel.hidden = YES;
             [timer invalidate];
+            timer = nil;
+            [self gameTimerStart];
         }
     }
 }
 
--(IBAction)start{
-    startBt.alpha = 0 ;
-    s = 1 ;
-    countdown_label = [[UILabel alloc] initWithFrame:(CGRectMake(10, 10, 100, 100))];
-    [self.view addSubview:countdown_label];
+- (void)gameTimerStart
+{
+    //MARK:Timer
+    timer = [NSTimer scheduledTimerWithTimeInterval:0.01
+                                             target:self
+                                           selector:@selector(down)
+                                           userInfo:nil
+                                            repeats:YES
+             ];
+    time = 10 ;
+    [timer fire];
 }
 
+-(void)down{
+    time = time - 0.01;
+    timeLabel.text = [NSString stringWithFormat:@"%.2f",time];
+    if(time <= 0){
+        timeLabel.text = @"0.00";
+        [timer invalidate];
+        [self performSelector:@selector(modalRVC)
+                   withObject:nil
+                   afterDelay:1.5];
+        UILabel *timeupLabel = [[UILabel alloc] initWithFrame:(CGRectMake(50, 50, 200, 100))];
+        timeupLabel.text = @"タイムアップ！";
+        [self.view addSubview:timeupLabel];
+        
+    }
+}
 
-
-
-
-
-
-
-
-
+-(void)modalRVC
+{
+    [self performSegueWithIdentifier:@"modalRVC" sender:self];
+}
 
 
 

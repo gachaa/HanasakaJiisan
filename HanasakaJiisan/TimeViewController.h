@@ -10,24 +10,22 @@
 
 @interface TimeViewController : UIViewController
 {
-    IBOutlet UILabel *timeLabel ;
-    UILabel *countdown_label ;
+    IBOutlet UILabel *timeLabel;
+    UILabel *countdownLabel;
     
 
-    NSTimer *timer ;
-    float time ;
-    float countd ;
-    int countdown ;
+    NSTimer *timer;
+    float time;
+    int countdown;
     
-    UIButton *startBt ;
-    
-    
-    int s ;
-    
-    IBOutlet UILabel *label ;
+    UIButton *startBt;
 }
--(IBAction)start ;
 
--(void)up ;
+
+//-(void)start;
+//-(void)countDownStart;
+//-(void)gameTimerStart;
+//-(void)down;
+
 
 @end
