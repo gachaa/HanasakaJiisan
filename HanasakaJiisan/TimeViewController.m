@@ -32,6 +32,11 @@
       forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:startBt];
 
+    
+    currentArray = [self makeTrees];
+    nextArray = [self makeTrees];
+    // NSArray *trees = @[[NSNumber numberWithInt:1], [NSNumber numberWithInt:2], [NSNumber numberWithInt:3]];
+    [self showTrees:currentArray and:nextArray];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -48,7 +53,7 @@
 }
 */
 
-
+// timerの設定とtimerを始動する
 -(void)start{
     countdown = 4;
     countdownLabel = [[UILabel alloc] initWithFrame:(CGRectMake(10, 10, 100, 100))];
@@ -59,11 +64,9 @@
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDownFirst) userInfo:nil repeats:YES];
     [timer fire];
     startBt.hidden = YES;
-    
 }
 
-
-
+// startに呼ばれる。カウントダウンが終了したら、timerを止めてgameTimerStartを呼ぶ
 - (void)countDownFirst
 {
     countdown = countdown - 1;
@@ -80,6 +83,7 @@
     }
 }
 
+
 - (void)gameTimerStart
 {
     //MARK:Timer
@@ -93,6 +97,7 @@
     [timer fire];
 }
 
+// 10秒数える。タイムアップしたらmodalRVCを呼ぶ
 -(void)down{
     time = time - 0.01;
     timeLabel.text = [NSString stringWithFormat:@"%.2f",time];
@@ -115,6 +120,52 @@
 }
 
 
+// currentImageViewにtreeImageWithNumberでセットされた画像を入れる
+- (void)showTrees:(NSArray *)current and:(NSArray *)next
+{
+    currentImageView1.image = [self treeImageWithNumber:[current[0] intValue]];
+    currentImageView2.image = [self treeImageWithNumber:[current[1] intValue]];
+    currentImageView3.image = [self treeImageWithNumber:[current[2] intValue]];
+    
+    nextImageView1.image = [self treeImageWithNumber:[next[0] intValue]];
+    nextImageView2.image = [self treeImageWithNumber:[next[1] intValue]];
+    nextImageView3.image = [self treeImageWithNumber:[next[2] intValue]];
+}
+
+//　treeImgeWithNumberにnumberの値によって画像を入れる
+- (UIImage *)treeImageWithNumber:(int)number
+{
+    if (number == 0) {
+        return [UIImage imageNamed:@"off"]; //枯れてる画像
+    } else {
+        return [UIImage imageNamed:@"on"]; //咲いてる画像
+    }
+}
+
+// currentArrayにnextArrayを入れて、nextArrayを新しく作って、shouTreesを呼ぶ
+- (void)susumu
+{
+    currentArray = nextArray;
+    nextArray = [self makeTrees];
+    [self showTrees:currentArray and:nextArray];
+}
+
+- (IBAction)susunde
+{
+    [self susumu];
+}
+
+// 1,0,1とか1,1,0とかの配列を作る
+- (NSArray *)makeTrees
+{
+    NSMutableArray *array = [NSMutableArray arrayWithArray:@[@1, @1, @1]];
+
+    int position = arc4random_uniform(3); // 0~2
+    
+    array[position] = @0;
+    
+    return array; // [0, 1 ,1]
+}
 
 
 

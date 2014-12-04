@@ -18,6 +18,8 @@
 		59EB6DB81A20D42C002A1AF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59EB6DB61A20D42C002A1AF1 /* Main.storyboard */; };
 		59FBA7901A20DB8300DF30E6 /* TimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FBA78F1A20DB8300DF30E6 /* TimeViewController.m */; };
 		59FBA7931A20DB9700DF30E6 /* EndlessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FBA7921A20DB9700DF30E6 /* EndlessViewController.m */; };
+		59FBA7961A30703900DF30E6 /* on.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FBA7941A30703900DF30E6 /* on.png */; };
+		59FBA7971A30703900DF30E6 /* off.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FBA7951A30703900DF30E6 /* off.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		59FBA78F1A20DB8300DF30E6 /* TimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeViewController.m; sourceTree = "<group>"; };
 		59FBA7911A20DB9700DF30E6 /* EndlessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndlessViewController.h; sourceTree = "<group>"; };
 		59FBA7921A20DB9700DF30E6 /* EndlessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndlessViewController.m; sourceTree = "<group>"; };
+		59FBA7941A30703900DF30E6 /* on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = on.png; sourceTree = "<group>"; };
+		59FBA7951A30703900DF30E6 /* off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = off.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 		595171B91A1E06E70063270D /* HanasakaJiisan */ = {
 			isa = PBXGroup;
 			children = (
+				59FBA7941A30703900DF30E6 /* on.png */,
+				59FBA7951A30703900DF30E6 /* off.png */,
 				595171BE1A1E06E70063270D /* AppDelegate.h */,
 				595171BF1A1E06E70063270D /* AppDelegate.m */,
 				595171C11A1E06E70063270D /* ViewController.h */,
@@ -220,7 +226,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				59EB6DB81A20D42C002A1AF1 /* Main.storyboard in Resources */,
+				59FBA7971A30703900DF30E6 /* off.png in Resources */,
 				595171CB1A1E06E70063270D /* LaunchScreen.xib in Resources */,
+				59FBA7961A30703900DF30E6 /* on.png in Resources */,
 				595171C81A1E06E70063270D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

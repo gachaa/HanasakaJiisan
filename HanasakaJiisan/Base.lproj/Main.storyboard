@@ -22,7 +22,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="v4w-4V-s0w" kind="modal" id="Neq-3L-sco"/>
+                                    <segue destination="v4w-4V-s0w" kind="presentation" modalTransitionStyle="crossDissolve" id="Neq-3L-sco"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3F-Pn-vUd">
@@ -65,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bNw-8U-BLU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="554" y="548"/>
+            <point key="canvasLocation" x="702" y="626"/>
         </scene>
         <!--Time View Controller-->
         <scene sceneID="QV7-Sd-SgZ">
@@ -85,12 +85,45 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fto-0t-eHj">
+                                <rect key="frame" x="23" y="191" width="60" height="80"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zbE-BQ-4NZ">
+                                <rect key="frame" x="130" y="191" width="60" height="80"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zBj-EH-D12">
+                                <rect key="frame" x="235" y="191" width="60" height="80"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FuE-gj-E18">
+                                <rect key="frame" x="23" y="103" width="60" height="80"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xne-al-q8Q">
+                                <rect key="frame" x="130" y="103" width="60" height="80"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oSR-L0-RYS">
+                                <rect key="frame" x="235" y="103" width="60" height="80"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsV-06-INk">
+                                <rect key="frame" x="218" y="427" width="44" height="30"/>
+                                <state key="normal" title="debug">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="susunde" destination="v4w-4V-s0w" eventType="touchUpInside" id="Rj8-Wo-jzL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="cKH-H5-MwA"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="currentImageView1" destination="fto-0t-eHj" id="Np6-op-HXT"/>
+                        <outlet property="currentImageView2" destination="zbE-BQ-4NZ" id="f94-mC-8zM"/>
+                        <outlet property="currentImageView3" destination="zBj-EH-D12" id="J8d-ao-yAJ"/>
+                        <outlet property="nextImageView1" destination="FuE-gj-E18" id="w5v-bi-kxN"/>
+                        <outlet property="nextImageView2" destination="xne-al-q8Q" id="zAa-85-MiF"/>
+                        <outlet property="nextImageView3" destination="oSR-L0-RYS" id="MXM-ec-czg"/>
                         <outlet property="timeLabel" destination="44L-a3-Aan" id="n0Y-J6-4Oj"/>
                         <segue destination="mGk-Pv-W1u" kind="presentation" identifier="modalRVC" id="hZZ-t8-76f"/>
                     </connections>
