@@ -33,10 +33,9 @@
     [self.view addSubview:startBt];
 
     
-    currentArray = [self makeTrees];
-    nextArray = [self makeTrees];
-    // NSArray *trees = @[[NSNumber numberWithInt:1], [NSNumber numberWithInt:2], [NSNumber numberWithInt:3]];
-    [self showTrees:currentArray and:nextArray];
+//    UIPanGestureRecognizer* panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
+//    [self.view addGestureRecognizer:panGesture];
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -54,11 +53,8 @@
 */
 
 // timerの設定とtimerを始動する
--(void)start{
+- (void)start{
     countdown = 4;
-    countdownLabel = [[UILabel alloc] initWithFrame:(CGRectMake(10, 10, 100, 100))];
-    countdownLabel.text = [NSString stringWithFormat:@"%D", countdown];
-    [self.view addSubview:countdownLabel];
     
     //タイマー1(3...2...1...のカウント)
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDownFirst) userInfo:nil repeats:YES];
@@ -70,18 +66,38 @@
 - (void)countDownFirst
 {
     countdown = countdown - 1;
-    countdownLabel.text = [NSString stringWithFormat:@"%d", countdown];
-    
-    if (countdown <= 0 ) {
-        countdownLabel.text = @"スタート！！";
-        if (countdown <= -1) {
-            countdownLabel.hidden = YES;
-            [timer invalidate];
-            timer = nil;
-            [self gameTimerStart];
-        }
+    if(countdown == 3){
+        CGRect rect = CGRectMake(10, 50, 250, 250);
+        imageView3 = [[UIImageView alloc]initWithFrame:rect];
+        imageView3.image = [UIImage imageNamed:@"3.png"];
+        [self.view addSubview:imageView3];
+    }else if(countdown == 2){
+        CGRect rect = CGRectMake(10, 50, 250, 250);
+        imageView2 = [[UIImageView alloc]initWithFrame:rect];
+        imageView2.image = [UIImage imageNamed:@"2.png"];
+        [self.view addSubview:imageView2];
+        [imageView3 removeFromSuperview];
+    }else if(countdown == 1){
+        CGRect rect = CGRectMake(10, 50, 250, 250);
+        imageView1 = [[UIImageView alloc]initWithFrame:rect];
+        imageView1.image = [UIImage imageNamed:@"1.png"];
+        [self.view addSubview:imageView1];
+        [imageView2 removeFromSuperview];
+    }else if (countdown == 0 ) {
+        [imageView1 removeFromSuperview];
+        CGRect rect = CGRectMake(10, 50, 250, 250);
+        imageViewStart = [[UIImageView alloc]initWithFrame:rect];
+        imageViewStart.image = [UIImage imageNamed:@"start_sign.png"];
+        [self.view addSubview:imageViewStart];
+    }else if (countdown == -1) {
+        [imageViewStart removeFromSuperview];
+        [timer invalidate];
+        timer = nil;
+        [self gameTimerStart];
+        [self gameStart];
     }
 }
+
 
 
 - (void)gameTimerStart
@@ -98,7 +114,7 @@
 }
 
 // 10秒数える。タイムアップしたらmodalRVCを呼ぶ
--(void)down{
+- (void)down{
     time = time - 0.01;
     timeLabel.text = [NSString stringWithFormat:@"%.2f",time];
     if(time <= 0){
@@ -114,7 +130,17 @@
     }
 }
 
--(void)modalRVC
+- (void)gameStart
+{
+    [imageViewStart removeFromSuperview];
+    currentArray = [self makeTrees];
+    nextArray = [self makeTrees];
+    // NSArray *trees = @[[NSNumber numberWithInt:1], [NSNumber numberWithInt:2], [NSNumber numberWithInt:3]];
+    [self showTrees:currentArray and:nextArray];
+
+}
+
+- (void)modalRVC
 {
     [self performSegueWithIdentifier:@"modalRVC" sender:self];
 }
@@ -142,7 +168,7 @@
     }
 }
 
-// currentArrayにnextArrayを入れて、nextArrayを新しく作って、shouTreesを呼ぶ
+// currentArrayにnextArrayを入れて、nextArrayを新しく作って、showTreesを呼ぶ
 - (void)susumu
 {
     currentArray = nextArray;
@@ -167,6 +193,11 @@
     return array; // [0, 1 ,1]
 }
 
+- (void) handlePanGesture:(UIPanGestureRecognizer*) sender {
+    UIPanGestureRecognizer* pan = (UIPanGestureRecognizer*) sender;
+    CGPoint location = [pan translationInView:self.view];
+    NSLog(@"pan x=%f, y=%f", location.x, location.y);
+}
 
 
 

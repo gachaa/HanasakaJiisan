@@ -11,7 +11,11 @@
 @interface TimeViewController : UIViewController
 {
     IBOutlet UILabel *timeLabel;
-    UILabel *countdownLabel;
+    
+    UIImageView *imageView1;
+    UIImageView *imageView2;
+    UIImageView *imageView3;
+    UIImageView *imageViewStart;
     
 
     NSTimer *timer;
