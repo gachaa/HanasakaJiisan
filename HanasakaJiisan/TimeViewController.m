@@ -33,8 +33,8 @@
     [self.view addSubview:startBt];
 
     
-//    UIPanGestureRecognizer* panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
-//    [self.view addGestureRecognizer:panGesture];
+    UIPanGestureRecognizer* panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
+    [hai addGestureRecognizer:panGesture];
     
 }
 - (void)didReceiveMemoryWarning {
@@ -140,6 +140,8 @@
 
 }
 
+
+
 - (void)modalRVC
 {
     [self performSegueWithIdentifier:@"modalRVC" sender:self];
@@ -168,6 +170,23 @@
     }
 }
 
+// 1,0,1とか1,1,0とかの配列を作る
+- (NSArray *)makeTrees
+{
+    NSMutableArray *array = [NSMutableArray arrayWithArray:@[@1, @1, @1]];
+    
+    int position = arc4random_uniform(3); // 0~2
+    
+    array[position] = @0;
+    
+    return array; // [0, 1 ,1]
+}
+
+- (IBAction)susunde
+{
+    [self susumu];
+}
+
 // currentArrayにnextArrayを入れて、nextArrayを新しく作って、showTreesを呼ぶ
 - (void)susumu
 {
@@ -176,30 +195,75 @@
     [self showTrees:currentArray and:nextArray];
 }
 
-- (IBAction)susunde
-{
-    [self susumu];
-}
-
-// 1,0,1とか1,1,0とかの配列を作る
-- (NSArray *)makeTrees
-{
-    NSMutableArray *array = [NSMutableArray arrayWithArray:@[@1, @1, @1]];
-
-    int position = arc4random_uniform(3); // 0~2
+//動きの認識
+- (void)handlePanGesture:(UIPanGestureRecognizer*) sender {
+    UIPanGestureRecognizer *pan = (UIPanGestureRecognizer*) sender;
+    // CGPoint location = [pan locationInView:hai];
+    CGPoint translation = [pan translationInView:hai];
+    // NSLog(@"pan location :  x=%f, y=%f", location.x, location.y);
+    NSLog(@"pan translation : x=%f, y=%f", translation.x, translation.y);
+    NSLog(@"pan translation : x=%f, y=%f", translation.x, translation.y);
+    CGFloat x = translation.x;
+    CGFloat y = translation.y;
     
-    array[position] = @0;
+    // NSLog(@"state : %@", @(pan.state));
     
-    return array; // [0, 1 ,1]
+    if (pan.state == UIGestureRecognizerStateEnded) {
+        if (y < 0) {
+            if (-10 < x && x < 10) {
+                NSLog(@"center");
+                // [self center];
+                [self judge:1];
+            }else if (-10 > x) {
+                NSLog(@"left");
+                // [self left];
+                [self judge:0];
+            }else if (10 < x) {
+                NSLog(@"right");
+                // [self right];
+                [self judge:2];
+            }else {
+                NSLog(@"undefined");
+            }
+        }
+    }
 }
 
-- (void) handlePanGesture:(UIPanGestureRecognizer*) sender {
-    UIPanGestureRecognizer* pan = (UIPanGestureRecognizer*) sender;
-    CGPoint location = [pan translationInView:self.view];
-    NSLog(@"pan x=%f, y=%f", location.x, location.y);
+//- (void)left
+//{
+//    if([currentArray[0] intValue]  == 1){
+//        hanteiLabel.text = @"せいこう";
+//    }else{
+//        hanteiLabel.text = @"しっぱい";
+//    }
+//}
+//
+//- (void)center
+//{
+//    if(currentArray[1] == 1){
+//        hanteiLabel.text = @"せいこう";
+//    }else{
+//        hanteiLabel.text = @"しっぱい";
+//    }
+//    
+//}
+//
+//- (void)right
+//{
+//    if(currentArray[3] == 1){
+//        hanteiLabel.text = @"せいこう";
+//    }else{
+//        hanteiLabel.text = @"しっぱい";
+//    }
+//}
+
+- (void)judge:(int)direction
+{
+    if([currentArray[direction] intValue] == 0){
+        hanteiLabel.text = @"せいこう";
+    }else{
+        hanteiLabel.text = @"しっぱい";
+    }
 }
-
-
-
 
 @end
