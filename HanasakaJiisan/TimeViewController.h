@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 
 @interface TimeViewController : UIViewController
 {
@@ -36,19 +37,10 @@
     
     NSArray *currentArray;
     NSArray *nextArray;
+    
+    int tokuten;
 }
 
-//ここに、IBActionもvoidも宣言しなくていい
-//-(void)start;
-//-(void)countDownStart;
-//-(void)gameTimerStart;
-//-(void)down;
-
-// 配列が与えられたら、imageviewに画像をセットする
-- (void)showTrees:(NSArray *)current and:(NSArray *)next;
-
-// 0, 1がきたら、枯れてる・咲いてる画像を返す
-- (UIImage *)treeImageWithNumber:(int)number;
 
 
 @end

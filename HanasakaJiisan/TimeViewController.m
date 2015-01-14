@@ -36,6 +36,9 @@
     UIPanGestureRecognizer* panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
     [hai addGestureRecognizer:panGesture];
     
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.TimeScore = 0;
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -126,8 +129,17 @@
         UILabel *timeupLabel = [[UILabel alloc] initWithFrame:(CGRectMake(50, 50, 200, 100))];
         timeupLabel.text = @"タイムアップ！";
         [self.view addSubview:timeupLabel];
-        
+        [self userdafault];
+
     }
+}
+
+-(void)userdafault{
+}
+
+- (void)modalRVC
+{
+    [self performSegueWithIdentifier:@"modalTRVC" sender:self];
 }
 
 - (void)gameStart
@@ -140,13 +152,14 @@
 
 }
 
-
-
-- (void)modalRVC
+// 1,0,1とか1,1,0とかの配列を作る
+- (NSArray *)makeTrees
 {
-    [self performSegueWithIdentifier:@"modalRVC" sender:self];
+    NSMutableArray *array = [NSMutableArray arrayWithArray:@[@1, @1, @1]];
+    int position = arc4random_uniform(3); // 0~2
+    array[position] = @0;
+    return array; // [0, 1 ,1]
 }
-
 
 // currentImageViewにtreeImageWithNumberでセットされた画像を入れる
 - (void)showTrees:(NSArray *)current and:(NSArray *)next
@@ -170,30 +183,7 @@
     }
 }
 
-// 1,0,1とか1,1,0とかの配列を作る
-- (NSArray *)makeTrees
-{
-    NSMutableArray *array = [NSMutableArray arrayWithArray:@[@1, @1, @1]];
-    
-    int position = arc4random_uniform(3); // 0~2
-    
-    array[position] = @0;
-    
-    return array; // [0, 1 ,1]
-}
 
-- (IBAction)susunde
-{
-    [self susumu];
-}
-
-// currentArrayにnextArrayを入れて、nextArrayを新しく作って、showTreesを呼ぶ
-- (void)susumu
-{
-    currentArray = nextArray;
-    nextArray = [self makeTrees];
-    [self showTrees:currentArray and:nextArray];
-}
 
 //動きの認識
 - (void)handlePanGesture:(UIPanGestureRecognizer*) sender {
@@ -201,8 +191,8 @@
     // CGPoint location = [pan locationInView:hai];
     CGPoint translation = [pan translationInView:hai];
     // NSLog(@"pan location :  x=%f, y=%f", location.x, location.y);
-    NSLog(@"pan translation : x=%f, y=%f", translation.x, translation.y);
-    NSLog(@"pan translation : x=%f, y=%f", translation.x, translation.y);
+    //NSLog(@"pan translation : x=%f, y=%f", translation.x, translation.y);
+    //NSLog(@"pan translation : x=%f, y=%f", translation.x, translation.y);
     CGFloat x = translation.x;
     CGFloat y = translation.y;
     
@@ -259,11 +249,28 @@
 
 - (void)judge:(int)direction
 {
-    if([currentArray[direction] intValue] == 0){
-        hanteiLabel.text = @"せいこう";
-    }else{
-        hanteiLabel.text = @"しっぱい";
+    if(time >= 0){
+        if([currentArray[direction] intValue] == 0){
+            hanteiLabel.text = @"せいこう";
+            AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+            appDelegate.TimeScore += 1;
+            NSLog(@"%d",appDelegate.TimeScore);
+            [self susumu];
+        }else{
+            hanteiLabel.text = @"しっぱい";
+            [self susumu];
+        }
     }
 }
+
+// currentArrayにnextArrayを入れて、nextArrayを新しく作って、showTreesを呼ぶ
+- (void)susumu
+{
+    currentArray = nextArray;
+    nextArray = [self makeTrees];
+    [self showTrees:currentArray and:nextArray];
+}
+
+
 
 @end
