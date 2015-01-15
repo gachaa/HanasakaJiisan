@@ -22,12 +22,15 @@
     IBOutlet UILabel *rank4Label;
     IBOutlet UILabel *rank5Label;
     
-    NSInteger rank1;
-    NSInteger rank2;
-    NSInteger rank3;
-    NSInteger rank4;
-    NSInteger rank5;
+    NSArray *labels;
+    
+//    NSInteger rank1;
+//    NSInteger rank2;
+//    NSInteger rank3;
+//    NSInteger rank4;
+//    NSInteger rank5;
 
+    NSMutableArray *ranking;
 }
 
 @end

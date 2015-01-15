@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		591DC49A1A67C37200B21DD3 /* EndlessResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 591DC4991A67C37200B21DD3 /* EndlessResultViewController.m */; };
 		595171BD1A1E06E70063270D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 595171BC1A1E06E70063270D /* main.m */; };
 		595171C01A1E06E70063270D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 595171BF1A1E06E70063270D /* AppDelegate.m */; };
 		595171C31A1E06E70063270D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 595171C21A1E06E70063270D /* ViewController.m */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		591DC4981A67C37200B21DD3 /* EndlessResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndlessResultViewController.h; sourceTree = "<group>"; };
+		591DC4991A67C37200B21DD3 /* EndlessResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndlessResultViewController.m; sourceTree = "<group>"; };
 		595171B71A1E06E70063270D /* HanasakaJiisan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HanasakaJiisan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		595171BB1A1E06E70063270D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		595171BC1A1E06E70063270D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -118,14 +121,16 @@
 				595171BF1A1E06E70063270D /* AppDelegate.m */,
 				595171C11A1E06E70063270D /* ViewController.h */,
 				595171C21A1E06E70063270D /* ViewController.m */,
+				59EB6DAE1A1F9B8F002A1AF1 /* RuleViewController.h */,
+				59EB6DAF1A1F9B8F002A1AF1 /* RuleViewController.m */,
 				59FBA78E1A20DB8300DF30E6 /* TimeViewController.h */,
 				59FBA78F1A20DB8300DF30E6 /* TimeViewController.m */,
 				59EB6DAB1A1F9B1C002A1AF1 /* TimeResultViewController.h */,
 				59EB6DAC1A1F9B1C002A1AF1 /* TimeResultViewController.m */,
 				59FBA7911A20DB9700DF30E6 /* EndlessViewController.h */,
 				59FBA7921A20DB9700DF30E6 /* EndlessViewController.m */,
-				59EB6DAE1A1F9B8F002A1AF1 /* RuleViewController.h */,
-				59EB6DAF1A1F9B8F002A1AF1 /* RuleViewController.m */,
+				591DC4981A67C37200B21DD3 /* EndlessResultViewController.h */,
+				591DC4991A67C37200B21DD3 /* EndlessResultViewController.m */,
 				59EB6DB61A20D42C002A1AF1 /* Main.storyboard */,
 				595171C71A1E06E70063270D /* Images.xcassets */,
 				595171C91A1E06E70063270D /* LaunchScreen.xib */,
@@ -271,6 +276,7 @@
 				595171C01A1E06E70063270D /* AppDelegate.m in Sources */,
 				595171BD1A1E06E70063270D /* main.m in Sources */,
 				59EB6DB01A1F9B8F002A1AF1 /* RuleViewController.m in Sources */,
+				591DC49A1A67C37200B21DD3 /* EndlessResultViewController.m in Sources */,
 				59EB6DAD1A1F9B1C002A1AF1 /* TimeResultViewController.m in Sources */,
 				59FBA7931A20DB9700DF30E6 /* EndlessViewController.m in Sources */,
 				59FBA7901A20DB8300DF30E6 /* TimeViewController.m in Sources */,

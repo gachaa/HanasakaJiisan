@@ -123,21 +123,16 @@
     if(time <= 0){
         timeLabel.text = @"0.00";
         [timer invalidate];
-        [self performSelector:@selector(modalRVC)
+        [self performSelector:@selector(modalTRVC)
                    withObject:nil
                    afterDelay:1.5];
         UILabel *timeupLabel = [[UILabel alloc] initWithFrame:(CGRectMake(50, 50, 200, 100))];
         timeupLabel.text = @"タイムアップ！";
         [self.view addSubview:timeupLabel];
-        [self userdafault];
-
     }
 }
 
--(void)userdafault{
-}
-
-- (void)modalRVC
+- (void)modalTRVC
 {
     [self performSegueWithIdentifier:@"modalTRVC" sender:self];
 }
@@ -200,15 +195,15 @@
     
     if (pan.state == UIGestureRecognizerStateEnded) {
         if (y < 0) {
-            if (-10 < x && x < 10) {
+            if (-15 < x && x < 15) {
                 NSLog(@"center");
                 // [self center];
                 [self judge:1];
-            }else if (-10 > x) {
+            }else if (-15 > x) {
                 NSLog(@"left");
                 // [self left];
                 [self judge:0];
-            }else if (10 < x) {
+            }else if (15 < x) {
                 NSLog(@"right");
                 // [self right];
                 [self judge:2];
