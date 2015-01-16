@@ -17,6 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+    
+    
+    
     startBt = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     startBt.center = CGPointMake(100,200);
     [startBt setTitle:@"start"
@@ -134,23 +139,31 @@
 
 
 
-//動きの認識
 - (void)handlePanGesture:(UIPanGestureRecognizer*) sender {
     UIPanGestureRecognizer *pan = (UIPanGestureRecognizer*) sender;
+    // CGPoint location = [pan locationInView:hai];
     CGPoint translation = [pan translationInView:hai];
+    // NSLog(@"pan location :  x=%f, y=%f", location.x, location.y);
+    //NSLog(@"pan translation : x=%f, y=%f", translation.x, translation.y);
+    //NSLog(@"pan translation : x=%f, y=%f", translation.x, translation.y);
     CGFloat x = translation.x;
     CGFloat y = translation.y;
+    
+    // NSLog(@"state : %@", @(pan.state));
     
     if (pan.state == UIGestureRecognizerStateEnded) {
         if (y < 0) {
             if (-15 < x && x < 15) {
                 NSLog(@"center");
+                // [self center];
                 [self judge:1];
             }else if (-15 > x) {
                 NSLog(@"left");
+                // [self left];
                 [self judge:0];
             }else if (15 < x) {
                 NSLog(@"right");
+                // [self right];
                 [self judge:2];
             }else {
                 NSLog(@"undefined");
@@ -175,6 +188,11 @@
                        afterDelay:1.5];
         }
     }
+}
+
+- (IBAction)debug
+{
+    [self susumu];
 }
 
 // currentArrayにnextArrayを入れて、nextArrayを新しく作って、showTreesを呼ぶ

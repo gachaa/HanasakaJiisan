@@ -33,8 +33,7 @@
     [self.view addSubview:startBt];
 
     
-    UIPanGestureRecognizer* panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
-    [hai addGestureRecognizer:panGesture];
+
     
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     appDelegate.TimeScore = 0;
@@ -144,6 +143,8 @@
     nextArray = [self makeTrees];
     // NSArray *trees = @[[NSNumber numberWithInt:1], [NSNumber numberWithInt:2], [NSNumber numberWithInt:3]];
     [self showTrees:currentArray and:nextArray];
+    UIPanGestureRecognizer* panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
+    [hai addGestureRecognizer:panGesture];
 
 }
 

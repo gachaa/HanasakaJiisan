@@ -30,6 +30,9 @@
                                 <state key="normal" title="endless">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="5bH-DN-MJr" kind="modal" id="MYF-DF-Dpj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTh-Mb-CVt">
                                 <rect key="frame" x="137" y="442" width="30" height="30"/>
@@ -44,9 +47,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <segue destination="5bH-DN-MJr" kind="presentation" modalTransitionStyle="crossDissolve" id="eBB-Eg-okG"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,7 +64,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="maru.png" translatesAutoresizingMaskIntoConstraints="NO" id="ePq-0N-vFN">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="maru.png" translatesAutoresizingMaskIntoConstraints="NO" id="ePq-0N-vFN">
                                 <rect key="frame" x="118" y="440" width="85" height="73"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="はんてい" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCX-Vb-MID">
@@ -91,6 +91,15 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QQw-nL-2nz">
                                 <rect key="frame" x="211" y="94" width="80" height="80"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIQ-8U-zer">
+                                <rect key="frame" x="233" y="376" width="44" height="30"/>
+                                <state key="normal" title="debug">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="debug" destination="5bH-DN-MJr" eventType="touchUpInside" id="WbA-r7-va0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -104,7 +113,7 @@
                         <outlet property="nextImageView1" destination="xc0-hf-r9C" id="Q5q-8h-8uo"/>
                         <outlet property="nextImageView2" destination="K21-c1-Mzl" id="Y1G-2r-JPB"/>
                         <outlet property="nextImageView3" destination="QQw-nL-2nz" id="qxB-ex-ArM"/>
-                        <segue destination="jkI-cW-KUx" kind="presentation" identifier="modalETVC" modalTransitionStyle="crossDissolve" id="jSz-y6-nNd"/>
+                        <segue destination="jkI-cW-KUx" kind="presentation" identifier="modalERVC" modalTransitionStyle="crossDissolve" id="jSz-y6-nNd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bNw-8U-BLU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -164,12 +173,18 @@
                                 <state key="normal" title="retry">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="5bH-DN-MJr" kind="presentation" modalTransitionStyle="crossDissolve" id="4Ph-C0-9HP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bo4-3E-5ch">
                                 <rect key="frame" x="135" y="504" width="30" height="30"/>
                                 <state key="normal" title="title">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="presentation" modalTransitionStyle="crossDissolve" id="LU0-5g-U7Q"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awJ-NW-6gf">
                                 <rect key="frame" x="242" y="486" width="43" height="30"/>
@@ -181,6 +196,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="rank1Label" destination="myo-eq-GsM" id="yIR-Kj-1YG"/>
+                        <outlet property="rank2Label" destination="P6x-cK-Enp" id="hGL-XM-3A8"/>
+                        <outlet property="rank3Label" destination="PIS-we-mbK" id="yKP-me-ZFv"/>
+                        <outlet property="rank4Label" destination="4zl-cW-HNa" id="q59-bm-ZOx"/>
+                        <outlet property="rank5Label" destination="MzC-T7-Lfv" id="NA0-wW-ZKZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eyn-RH-H8i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -306,6 +328,9 @@
                                 <state key="normal" title="title">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="presentation" modalTransitionStyle="crossDissolve" id="HXX-1I-LpZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3M-Ra-tWi">
                                 <rect key="frame" x="216" y="469" width="43" height="30"/>
@@ -383,6 +408,8 @@
         <image name="maru.png" width="220" height="207"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZxL-LL-nPT"/>
+        <segue reference="Neq-3L-sco"/>
+        <segue reference="LU0-5g-U7Q"/>
+        <segue reference="4Ph-C0-9HP"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -19,6 +19,7 @@
     IBOutlet UILabel *rank4Label;
     IBOutlet UILabel *rank5Label;
     
+    
     int tokuten;
     
     NSArray *labels;
