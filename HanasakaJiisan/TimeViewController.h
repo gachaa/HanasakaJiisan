@@ -18,8 +18,7 @@
     UIImageView *imageView1;
     UIImageView *imageView2;
     UIImageView *imageView3;
-    UIImageView *imageViewStart;
-    
+    UIImageView *imageViewStart;    
 
     NSTimer *timer;
     float time;

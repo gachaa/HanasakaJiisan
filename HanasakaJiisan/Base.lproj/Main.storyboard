@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="v4w-4V-s0w">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -13,9 +13,12 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="harappa2.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Sq-gA-HRL">
+                                <rect key="frame" x="0.0" y="106" width="375" height="571"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOs-eq-6qB">
                                 <rect key="frame" x="137" y="315" width="74" height="30"/>
                                 <state key="normal" title="timeAttack">
@@ -44,13 +47,13 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="58" y="265"/>
+            <point key="canvasLocation" x="57.5" y="264.5"/>
         </scene>
         <!--Endless View Controller-->
         <scene sceneID="WG8-ge-c3K">
@@ -61,7 +64,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wzf-zO-fNX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FXf-AN-ddR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="maru.png" translatesAutoresizingMaskIntoConstraints="NO" id="ePq-0N-vFN">
@@ -103,7 +106,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="currentImageView1" destination="1aU-CP-EOn" id="zPG-4m-Bm3"/>
                         <outlet property="currentImageView2" destination="FvT-5j-eAU" id="AQa-x0-LjU"/>
@@ -129,7 +132,7 @@
                         <viewControllerLayoutGuide type="bottom" id="E2N-BD-qed"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4zp-Wb-1Dg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="らんきんぐ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGE-kq-d7L">
@@ -195,7 +198,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="rank1Label" destination="myo-eq-GsM" id="yIR-Kj-1YG"/>
                         <outlet property="rank2Label" destination="P6x-cK-Enp" id="hGL-XM-3A8"/>
@@ -217,47 +220,53 @@
                         <viewControllerLayoutGuide type="bottom" id="a3w-sW-q6w"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4CL-Rb-ga9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fto-0t-eHj">
-                                <rect key="frame" x="23" y="191" width="60" height="80"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kareki2.png" translatesAutoresizingMaskIntoConstraints="NO" id="e2h-j6-xt0">
+                                <rect key="frame" x="-153" y="-67" width="476" height="271"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nohara3.png" translatesAutoresizingMaskIntoConstraints="NO" id="cHN-Yq-Kgb">
+                                <rect key="frame" x="0.0" y="93" width="375" height="574"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zbE-BQ-4NZ">
-                                <rect key="frame" x="130" y="191" width="60" height="80"/>
+                                <rect key="frame" x="141" y="248" width="85" height="95"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zBj-EH-D12">
-                                <rect key="frame" x="235" y="191" width="60" height="80"/>
+                                <rect key="frame" x="244" y="248" width="85" height="95"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xne-al-q8Q">
-                                <rect key="frame" x="137" y="103" width="47" height="58"/>
+                                <rect key="frame" x="141" y="145" width="85" height="95"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oSR-L0-RYS">
-                                <rect key="frame" x="235" y="103" width="47" height="58"/>
+                                <rect key="frame" x="244" y="145" width="85" height="95"/>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="maru.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Cq-OU-RTW">
-                                <rect key="frame" x="122" y="451" width="76" height="67"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hai5.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Cq-OU-RTW">
+                                <rect key="frame" x="138" y="482" width="98" height="107"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FuE-gj-E18">
-                                <rect key="frame" x="36" y="103" width="47" height="58"/>
+                                <rect key="frame" x="38" y="145" width="85" height="95"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="はんてい" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PsP-yD-JjZ">
-                                <rect key="frame" x="122" y="314" width="145" height="21"/>
+                                <rect key="frame" x="115" y="377" width="145" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="timelabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44L-a3-Aan">
-                                <rect key="frame" x="98" y="34" width="125" height="35"/>
+                                <rect key="frame" x="121" y="33" width="125" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fto-0t-eHj">
+                                <rect key="frame" x="38" y="248" width="85" height="95"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="cKH-H5-MwA"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="currentImageView1" destination="fto-0t-eHj" id="Np6-op-HXT"/>
                         <outlet property="currentImageView2" destination="zbE-BQ-4NZ" id="f94-mC-8zM"/>
@@ -273,7 +282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyx-bA-gJ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="553" y="-85"/>
+            <point key="canvasLocation" x="552.5" y="-85.5"/>
         </scene>
         <!--Time Result View Controller-->
         <scene sceneID="PKe-Og-3NR">
@@ -284,7 +293,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Kbt-fc-ROF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UK9-Tb-vje">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="らんきんぐ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBg-a5-CvT">
@@ -354,7 +363,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Aqe-7r-mmN"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="rank1Label" destination="SkV-oG-4JS" id="gVr-yz-sKf"/>
                         <outlet property="rank2Label" destination="eSL-gK-qL7" id="6lB-RB-Gle"/>
@@ -376,7 +385,7 @@
                         <viewControllerLayoutGuide type="bottom" id="DJU-rO-Ofw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jcU-zg-pt3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="ここにルールをかく" translatesAutoresizingMaskIntoConstraints="NO" id="ZvR-ig-NdU">
@@ -397,19 +406,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Oy-bF-tpy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="58" y="982"/>
+            <point key="canvasLocation" x="57.5" y="1046.5"/>
         </scene>
     </scenes>
     <resources>
+        <image name="hai5.png" width="140" height="140"/>
+        <image name="harappa2.png" width="260" height="344"/>
+        <image name="kareki2.png" width="572" height="372"/>
         <image name="maru.png" width="220" height="207"/>
+        <image name="nohara3.png" width="600" height="800"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Neq-3L-sco"/>
-        <segue reference="LU0-5g-U7Q"/>
-        <segue reference="4Ph-C0-9HP"/>
+        <segue reference="MYF-DF-Dpj"/>
+        <segue reference="HXX-1I-LpZ"/>
+        <segue reference="ZxL-LL-nPT"/>
     </inferredMetricsTieBreakers>
 </document>
