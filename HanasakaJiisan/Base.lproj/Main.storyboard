@@ -16,9 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="harappa2.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Sq-gA-HRL">
-                                <rect key="frame" x="0.0" y="106" width="375" height="571"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOs-eq-6qB">
                                 <rect key="frame" x="137" y="315" width="74" height="30"/>
                                 <state key="normal" title="timeAttack">
@@ -223,29 +220,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kareki2.png" translatesAutoresizingMaskIntoConstraints="NO" id="e2h-j6-xt0">
-                                <rect key="frame" x="-153" y="-67" width="476" height="271"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nohara3.png" translatesAutoresizingMaskIntoConstraints="NO" id="cHN-Yq-Kgb">
                                 <rect key="frame" x="0.0" y="93" width="375" height="574"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zbE-BQ-4NZ">
-                                <rect key="frame" x="141" y="248" width="85" height="95"/>
+                                <rect key="frame" x="142" y="249" width="90" height="90"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zBj-EH-D12">
-                                <rect key="frame" x="244" y="248" width="85" height="95"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xne-al-q8Q">
-                                <rect key="frame" x="141" y="145" width="85" height="95"/>
+                                <rect key="frame" x="245" y="249" width="90" height="90"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oSR-L0-RYS">
-                                <rect key="frame" x="244" y="145" width="85" height="95"/>
+                                <rect key="frame" x="244" y="154" width="70" height="70"/>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hai5.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Cq-OU-RTW">
                                 <rect key="frame" x="138" y="482" width="98" height="107"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FuE-gj-E18">
-                                <rect key="frame" x="38" y="145" width="85" height="95"/>
+                                <rect key="frame" x="60" y="154" width="70" height="70"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="はんてい" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PsP-yD-JjZ">
                                 <rect key="frame" x="115" y="377" width="145" height="21"/>
@@ -254,13 +245,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="timelabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44L-a3-Aan">
-                                <rect key="frame" x="121" y="33" width="125" height="35"/>
+                                <rect key="frame" x="125" y="35" width="125" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fto-0t-eHj">
-                                <rect key="frame" x="38" y="248" width="85" height="95"/>
+                                <rect key="frame" x="39" y="249" width="90" height="90"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xne-al-q8Q">
+                                <rect key="frame" x="152" y="154" width="70" height="70"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -415,14 +409,12 @@
     </scenes>
     <resources>
         <image name="hai5.png" width="140" height="140"/>
-        <image name="harappa2.png" width="260" height="344"/>
-        <image name="kareki2.png" width="572" height="372"/>
         <image name="maru.png" width="220" height="207"/>
         <image name="nohara3.png" width="600" height="800"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MYF-DF-Dpj"/>
         <segue reference="HXX-1I-LpZ"/>
-        <segue reference="ZxL-LL-nPT"/>
+        <segue reference="Neq-3L-sco"/>
+        <segue reference="MYF-DF-Dpj"/>
     </inferredMetricsTieBreakers>
 </document>
