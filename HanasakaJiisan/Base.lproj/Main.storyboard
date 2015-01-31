@@ -220,6 +220,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Teq-Kc-Nvd">
+                                <rect key="frame" x="0.0" y="0.0" width="382" height="216"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nohara3.png" translatesAutoresizingMaskIntoConstraints="NO" id="cHN-Yq-Kgb">
                                 <rect key="frame" x="0.0" y="93" width="375" height="574"/>
                             </imageView>
@@ -270,6 +273,7 @@
                         <outlet property="nextImageView1" destination="FuE-gj-E18" id="w5v-bi-kxN"/>
                         <outlet property="nextImageView2" destination="xne-al-q8Q" id="zAa-85-MiF"/>
                         <outlet property="nextImageView3" destination="oSR-L0-RYS" id="MXM-ec-czg"/>
+                        <outlet property="sakuraJudge" destination="Teq-Kc-Nvd" id="41u-8I-4YK"/>
                         <outlet property="timeLabel" destination="44L-a3-Aan" id="n0Y-J6-4Oj"/>
                         <segue destination="mGk-Pv-W1u" kind="presentation" identifier="modalTRVC" modalTransitionStyle="crossDissolve" id="hZZ-t8-76f"/>
                     </connections>

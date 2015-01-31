@@ -11,6 +11,7 @@
 		591DC4AA1A6FE20E00B21DD3 /* nohara3.png in Resources */ = {isa = PBXBuildFile; fileRef = 591DC4A91A6FE20E00B21DD3 /* nohara3.png */; };
 		591DC4AE1A6FE39300B21DD3 /* off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 591DC4AC1A6FE39300B21DD3 /* off@2x.png */; };
 		591DC4AF1A6FE39300B21DD3 /* on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 591DC4AD1A6FE39300B21DD3 /* on@2x.png */; };
+		591E64851A7D1E98006D4A8C /* kareeda.png in Resources */ = {isa = PBXBuildFile; fileRef = 591E64841A7D1E98006D4A8C /* kareeda.png */; };
 		595171BD1A1E06E70063270D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 595171BC1A1E06E70063270D /* main.m */; };
 		595171C01A1E06E70063270D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 595171BF1A1E06E70063270D /* AppDelegate.m */; };
 		595171C31A1E06E70063270D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 595171C21A1E06E70063270D /* ViewController.m */; };
@@ -49,6 +50,7 @@
 		591DC4A91A6FE20E00B21DD3 /* nohara3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nohara3.png; path = images/nohara3.png; sourceTree = "<group>"; };
 		591DC4AC1A6FE39300B21DD3 /* off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "off@2x.png"; path = "images/off@2x.png"; sourceTree = "<group>"; };
 		591DC4AD1A6FE39300B21DD3 /* on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "on@2x.png"; path = "images/on@2x.png"; sourceTree = "<group>"; };
+		591E64841A7D1E98006D4A8C /* kareeda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kareeda.png; sourceTree = "<group>"; };
 		595171B71A1E06E70063270D /* HanasakaJiisan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HanasakaJiisan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		595171BB1A1E06E70063270D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		595171BC1A1E06E70063270D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -135,8 +137,9 @@
 				59FBA7A61A40721000DF30E6 /* start_sign.png */,
 				59FBA79E1A39AC6500DF30E6 /* 2.png */,
 				59FBA7A41A39B98800DF30E6 /* maru.png */,
-				59707B5F1A73E49200881A3E /* kareki2.png */,
+				591E64841A7D1E98006D4A8C /* kareeda.png */,
 				59707B631A7BCD7900881A3E /* saita.png */,
+				59707B5F1A73E49200881A3E /* kareki2.png */,
 				59FBA79F1A39AC6500DF30E6 /* 1.png */,
 				59707B611A73E66500881A3E /* hai5.png */,
 				59FBA7A01A39AC6500DF30E6 /* 3.png */,
@@ -279,6 +282,7 @@
 				591DC4AF1A6FE39300B21DD3 /* on@2x.png in Resources */,
 				591DC4AE1A6FE39300B21DD3 /* off@2x.png in Resources */,
 				59707B621A73E66500881A3E /* hai5.png in Resources */,
+				591E64851A7D1E98006D4A8C /* kareeda.png in Resources */,
 				59707B641A7BCD7900881A3E /* saita.png in Resources */,
 				59FBA7A71A40721000DF30E6 /* start_sign.png in Resources */,
 				595171C81A1E06E70063270D /* Images.xcassets in Resources */,

@@ -251,9 +251,11 @@
             AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
             appDelegate.TimeScore += 1;
             NSLog(@"%d",appDelegate.TimeScore);
+            sakuraJudge.image = [UIImage imageNamed:@"saita.png"];
             [self susumu];
         }else{
             hanteiLabel.text = @"しっぱい";
+            sakuraJudge.image = [UIImage imageNamed:@"kareeda.png"];
             [self susumu];
         }
     }
