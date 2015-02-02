@@ -255,7 +255,7 @@
             [self susumu];
         }else{
             hanteiLabel.text = @"しっぱい";
-            sakuraJudge.image = [UIImage imageNamed:@"kareeda.png"];
+            sakuraJudge.image = [UIImage imageNamed:@"saitenai.png"];
             [self susumu];
         }
     }

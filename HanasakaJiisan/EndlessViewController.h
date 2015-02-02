@@ -11,7 +11,6 @@
 
 @interface EndlessViewController : UIViewController
 {
-//    IBOutlet UILabel *timeLabel;
     IBOutlet UILabel *hanteiLabel;
     IBOutlet UIImageView *hai;
     
