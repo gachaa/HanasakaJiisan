@@ -37,7 +37,7 @@
     [hai addGestureRecognizer:panGesture];
     
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    appDelegate.TimeScore = 0;
+    appDelegate.endlessScore = 0;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -178,8 +178,8 @@
         if([currentArray[direction] intValue] == 0){
             hanteiLabel.text = @"せいこう";
             AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-            appDelegate.TimeScore += 1;
-            NSLog(@"%d",appDelegate.TimeScore);
+            appDelegate.endlessScore += 1;
+            NSLog(@"%d",appDelegate.endlessScore);
             [self susumu];
         }else{
             hanteiLabel.text = @"しっぱい";

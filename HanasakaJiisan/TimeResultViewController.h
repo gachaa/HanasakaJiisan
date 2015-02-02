@@ -16,6 +16,8 @@
     
     int tokuten;
     
+    IBOutlet UILabel *scoreLabel;
+    
     IBOutlet UILabel *rank1Label;
     IBOutlet UILabel *rank2Label;
     IBOutlet UILabel *rank3Label;

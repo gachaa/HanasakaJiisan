@@ -249,8 +249,8 @@
         if([currentArray[direction] intValue] == 0){
             hanteiLabel.text = @"せいこう";
             AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-            appDelegate.TimeScore += 1;
-            NSLog(@"%d",appDelegate.TimeScore);
+            appDelegate.timeScore += 1;
+            NSLog(@"%d",appDelegate.timeScore);
             sakuraJudge.image = [UIImage imageNamed:@"saita.png"];
             [self susumu];
         }else{

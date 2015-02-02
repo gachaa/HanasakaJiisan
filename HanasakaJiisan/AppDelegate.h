@@ -10,11 +10,13 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 {
-    int TimeScore;
+    int timeScore;
+    int endlessScore;
 }
 
 @property (strong, nonatomic) UIWindow *window;
-@property int TimeScore;
+@property int timeScore;
+@property int endlessScore;
 
 
 

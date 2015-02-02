@@ -38,7 +38,9 @@
     }
 
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    tokuten = appDelegate.TimeScore;
+    tokuten = appDelegate.timeScore;
+    
+    scoreLabel.text = [NSString stringWithFormat:@"%d",tokuten];
     
     // 得点を更新
     for (int i = 0; i < 5; i++) {

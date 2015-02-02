@@ -256,7 +256,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xne-al-q8Q">
                                 <rect key="frame" x="152" y="154" width="70" height="70"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kareeda3.png" translatesAutoresizingMaskIntoConstraints="NO" id="Teq-Kc-Nvd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Teq-Kc-Nvd">
                                 <rect key="frame" x="0.0" y="7" width="300" height="130"/>
                             </imageView>
                         </subviews>
@@ -294,38 +294,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="らんきんぐ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBg-a5-CvT">
-                                <rect key="frame" x="139" y="28" width="85" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SkV-oG-4JS">
-                                <rect key="frame" x="132" y="130" width="42" height="21"/>
+                                <rect key="frame" x="166" y="168" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSL-gK-qL7">
-                                <rect key="frame" x="149" y="197" width="42" height="21"/>
+                                <rect key="frame" x="166" y="219" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSQ-e8-00h">
-                                <rect key="frame" x="139" y="259" width="42" height="21"/>
+                                <rect key="frame" x="166" y="278" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruM-bC-yo9">
-                                <rect key="frame" x="139" y="323" width="42" height="21"/>
+                                <rect key="frame" x="166" y="338" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Cb-gD-8i4">
-                                <rect key="frame" x="127" y="395" width="42" height="21"/>
+                                <rect key="frame" x="166" y="394" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -357,6 +351,18 @@
                                     <segue destination="v4w-4V-s0w" kind="modal" id="ZxL-LL-nPT"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="らんきんぐ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBg-a5-CvT">
+                                <rect key="frame" x="145" y="28" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="今のスコア" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgB-MZ-aDy">
+                                <rect key="frame" x="145" y="103" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -368,11 +374,12 @@
                         <outlet property="rank3Label" destination="lSQ-e8-00h" id="4Gh-Fc-IRA"/>
                         <outlet property="rank4Label" destination="ruM-bC-yo9" id="oss-fp-pOf"/>
                         <outlet property="rank5Label" destination="1Cb-gD-8i4" id="8LU-bW-uSd"/>
+                        <outlet property="scoreLabel" destination="lgB-MZ-aDy" id="1Y8-Fk-MoD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FRi-BE-sl6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="953" y="-85"/>
+            <point key="canvasLocation" x="952.5" y="-85.5"/>
         </scene>
         <!--Rule View Controller-->
         <scene sceneID="AyN-e6-Z2G">
@@ -413,13 +420,12 @@
     </scenes>
     <resources>
         <image name="hai5.png" width="140" height="140"/>
-        <image name="kareeda3.png" width="600" height="600"/>
         <image name="maru.png" width="220" height="207"/>
         <image name="nohara3.png" width="600" height="800"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HXX-1I-LpZ"/>
-        <segue reference="Neq-3L-sco"/>
         <segue reference="MYF-DF-Dpj"/>
+        <segue reference="HXX-1I-LpZ"/>
+        <segue reference="ZxL-LL-nPT"/>
     </inferredMetricsTieBreakers>
 </document>

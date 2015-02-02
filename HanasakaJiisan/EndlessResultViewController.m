@@ -32,7 +32,7 @@
     }
     
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    tokuten = appDelegate.TimeScore;
+    tokuten = appDelegate.endlessScore;
     
     // 得点を更新
     for (int i = 0; i < 5; i++) {
