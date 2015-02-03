@@ -26,6 +26,8 @@
     
     UIButton *startBt;
     
+    IBOutlet UIImageView *sakuraJudgeImageView;
+    
     IBOutlet UIImageView *currentImageView1;
     IBOutlet UIImageView *currentImageView2;
     IBOutlet UIImageView *currentImageView3;

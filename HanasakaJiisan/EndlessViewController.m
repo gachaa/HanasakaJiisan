@@ -177,12 +177,14 @@
     if(time >= 0){
         if([currentArray[direction] intValue] == 0){
             hanteiLabel.text = @"せいこう";
+            sakuraJudgeImageView.image = [UIImage imageNamed:@"saita.png"];
             AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
             appDelegate.endlessScore += 1;
             NSLog(@"%d",appDelegate.endlessScore);
             [self susumu];
         }else{
             hanteiLabel.text = @"しっぱい";
+            sakuraJudgeImageView.image = [UIImage imageNamed:@"saitenai.png"];
             [self performSelector:@selector(modalERVC)
                        withObject:nil
                        afterDelay:1.5];

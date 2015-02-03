@@ -26,7 +26,7 @@
     
     UIButton *startBt;
     
-    IBOutlet UIImageView *sakuraJudge;
+    IBOutlet UIImageView *sakuraJudgeImageView;
     
     IBOutlet UIImageView *currentImageView1;
     IBOutlet UIImageView *currentImageView2;
@@ -35,7 +35,6 @@
     IBOutlet UIImageView *nextImageView1;
     IBOutlet UIImageView *nextImageView2;
     IBOutlet UIImageView *nextImageView3;
-
     
     NSArray *currentArray;
     NSArray *nextArray;
