@@ -43,6 +43,7 @@
         }
     }
     
+    
     // NSLog(@"added : %@", ranking);
     
     // rankingの上から五個だけ保存

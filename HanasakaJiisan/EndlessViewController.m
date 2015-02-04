@@ -192,10 +192,6 @@
     }
 }
 
-- (IBAction)debug
-{
-    [self susumu];
-}
 
 // currentArrayにnextArrayを入れて、nextArrayを新しく作って、showTreesを呼ぶ
 - (void)susumu
