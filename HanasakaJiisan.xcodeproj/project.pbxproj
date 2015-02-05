@@ -28,7 +28,6 @@
 		59FBA7A11A39AC6500DF30E6 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FBA79E1A39AC6500DF30E6 /* 2.png */; };
 		59FBA7A21A39AC6500DF30E6 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FBA79F1A39AC6500DF30E6 /* 1.png */; };
 		59FBA7A31A39AC6500DF30E6 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FBA7A01A39AC6500DF30E6 /* 3.png */; };
-		59FBA7A51A39B98800DF30E6 /* maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FBA7A41A39B98800DF30E6 /* maru.png */; };
 		59FBA7A71A40721000DF30E6 /* start_sign.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FBA7A61A40721000DF30E6 /* start_sign.png */; };
 /* End PBXBuildFile section */
 
@@ -75,7 +74,6 @@
 		59FBA79E1A39AC6500DF30E6 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		59FBA79F1A39AC6500DF30E6 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		59FBA7A01A39AC6500DF30E6 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
-		59FBA7A41A39B98800DF30E6 /* maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maru.png; sourceTree = "<group>"; };
 		59FBA7A61A40721000DF30E6 /* start_sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start_sign.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,7 +131,6 @@
 			children = (
 				591DC4AB1A6FE22000B21DD3 /* images */,
 				59FBA7A61A40721000DF30E6 /* start_sign.png */,
-				59FBA7A41A39B98800DF30E6 /* maru.png */,
 				59FBA79F1A39AC6500DF30E6 /* 1.png */,
 				59707B611A73E66500881A3E /* hai5.png */,
 				59FBA7A01A39AC6500DF30E6 /* 3.png */,
@@ -267,7 +264,6 @@
 			files = (
 				59FBA7A11A39AC6500DF30E6 /* 2.png in Resources */,
 				59EB6DB81A20D42C002A1AF1 /* Main.storyboard in Resources */,
-				59FBA7A51A39B98800DF30E6 /* maru.png in Resources */,
 				591DC4AA1A6FE20E00B21DD3 /* nohara3.png in Resources */,
 				59FBA7A31A39AC6500DF30E6 /* 3.png in Resources */,
 				595171CB1A1E06E70063270D /* LaunchScreen.xib in Resources */,
@@ -425,9 +421,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Erika Maemoto (4W24DA68C3)";
 				INFOPLIST_FILE = HanasakaJiisan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "25f8fe04-1927-45db-bd4d-250aca4fd969";
 			};
 			name = Debug;
 		};
@@ -435,9 +434,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Erika Maemoto (4W24DA68C3)";
 				INFOPLIST_FILE = HanasakaJiisan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "25f8fe04-1927-45db-bd4d-250aca4fd969";
 			};
 			name = Release;
 		};

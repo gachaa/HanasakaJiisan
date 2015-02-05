@@ -24,7 +24,8 @@
     labels = @[rank1Label, rank2Label, rank3Label, rank4Label, rank5Label];
     
     // いままでのランキングを取得
-    ranking = (NSMutableArray *)[userDefaults arrayForKey:@"ranking"]; //userDefaultsに入ってる配列は、全部NSArrayになっちゃう
+    // ranking = (NSMutableArray *)[userDefaults arrayForKey:@"ranking"]; //userDefaultsに入ってる配列は、全部NSArrayになっちゃう
+    ranking = [NSMutableArray arrayWithArray:[userDefaults arrayForKey:@"ranking"]];
     
     // 最初は、0の配列を用意
     if (ranking == nil || ranking.count == 0) { // rankingの配列の中が空
@@ -44,6 +45,12 @@
     }
     
     
+    // ラベルに表示
+    for (int i = 0; i < 5; i++) {
+        int score = [ranking[i] intValue];
+        ((UILabel *)labels[i]).text = [NSString stringWithFormat:@"%d", score];
+    }
+    
     // NSLog(@"added : %@", ranking);
     
     // rankingの上から五個だけ保存
@@ -57,9 +64,7 @@
     // 保存
     [userDefaults setObject:newRanking forKey:@"ranking"];
     
-    [self ranking];
-
-    
+    // [self ranking];
 
 }
 
@@ -78,21 +83,21 @@
 }
 */
 
-
-- (void)ranking
-{
-    
-    // 更新されたランキングを取得
-    NSArray *ranking_ = [userDefaults arrayForKey:@"ranking"];
-    
-    NSLog(@"get : %@", ranking_);
-    // NSArray *ranking_ = @[@12, @11, @9, @8, @7];
-    
-    // ラベルに表示
-    for (int i = 0; i < 5; i++) {
-        int score = [ranking_[i] intValue];
-        ((UILabel *)labels[i]).text = [NSString stringWithFormat:@"%d", score];
-    }
-}
+//
+//- (void)ranking
+//{
+//    
+//    // 更新されたランキングを取得
+//    NSArray *ranking_ = [userDefaults arrayForKey:@"ranking"];
+//    
+//    NSLog(@"get : %@", ranking_);
+//    // NSArray *ranking_ = @[@12, @11, @9, @8, @7];
+//    
+//    // ラベルに表示
+//    for (int i = 0; i < 5; i++) {
+//        int score = [ranking_[i] intValue];
+//        ((UILabel *)labels[i]).text = [NSString stringWithFormat:@"%d", score];
+//    }
+//}
 
 @end
