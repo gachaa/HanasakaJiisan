@@ -19,7 +19,7 @@
     // Do any additional setup after loading the view.
     
     timeLabel.text = @"" ;
-    
+    countDownLabel.text = @"";
     
     //MARK:StartButtonを作ってるよ
     startBt = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -68,29 +68,28 @@
 - (void)countDownFirst
 {
     countdown = countdown - 1;
-    if(countdown == 3){
-        CGRect rect = CGRectMake(10, 50, 250, 250);
+    if(countdown == 3){CGRect rect = CGRectMake(37, 300, 300, 95);
         imageView3 = [[UIImageView alloc]initWithFrame:rect];
         imageView3.image = [UIImage imageNamed:@"3.png"];
         [self.view addSubview:imageView3];
     }else if(countdown == 2){
-        CGRect rect = CGRectMake(10, 50, 250, 250);
+        CGRect rect = CGRectMake(37, 300, 300, 95);
         imageView2 = [[UIImageView alloc]initWithFrame:rect];
         imageView2.image = [UIImage imageNamed:@"2.png"];
         [self.view addSubview:imageView2];
         [imageView3 removeFromSuperview];
     }else if(countdown == 1){
-        CGRect rect = CGRectMake(10, 50, 250, 250);
+        CGRect rect = CGRectMake(37, 300, 300, 95);
         imageView1 = [[UIImageView alloc]initWithFrame:rect];
         imageView1.image = [UIImage imageNamed:@"1.png"];
         [self.view addSubview:imageView1];
         [imageView2 removeFromSuperview];
     }else if (countdown == 0 ) {
-        [imageView1 removeFromSuperview];
-        CGRect rect = CGRectMake(10, 50, 250, 250);
+        CGRect rect = CGRectMake(37, 300, 300, 95);
         imageViewStart = [[UIImageView alloc]initWithFrame:rect];
-        imageViewStart.image = [UIImage imageNamed:@"start_sign.png"];
+        imageViewStart.image = [UIImage imageNamed:@"start.png"];
         [self.view addSubview:imageViewStart];
+        [imageView1 removeFromSuperview];
     }else if (countdown == -1) {
         [imageViewStart removeFromSuperview];
         [timer invalidate];
@@ -138,7 +137,6 @@
 
 - (void)gameStart
 {
-    [imageViewStart removeFromSuperview];
     currentArray = [self makeTrees];
     nextArray = [self makeTrees];
     // NSArray *trees = @[[NSNumber numberWithInt:1], [NSNumber numberWithInt:2], [NSNumber numberWithInt:3]];
@@ -184,29 +182,20 @@
 //動きの認識
 - (void)handlePanGesture:(UIPanGestureRecognizer*) sender {
     UIPanGestureRecognizer *pan = (UIPanGestureRecognizer*) sender;
-    // CGPoint location = [pan locationInView:hai];
     CGPoint translation = [pan translationInView:hai];
-    // NSLog(@"pan location :  x=%f, y=%f", location.x, location.y);
-    //NSLog(@"pan translation : x=%f, y=%f", translation.x, translation.y);
-    //NSLog(@"pan translation : x=%f, y=%f", translation.x, translation.y);
     CGFloat x = translation.x;
     CGFloat y = translation.y;
     
-    // NSLog(@"state : %@", @(pan.state));
-    
     if (pan.state == UIGestureRecognizerStateEnded) {
         if (y < 0) {
-            if (-15 < x && x < 15) {
+            if (-15 <= x && x <= 20) {
                 NSLog(@"center");
-                // [self center];
                 [self judge:1];
             }else if (-15 > x) {
                 NSLog(@"left");
-                // [self left];
                 [self judge:0];
-            }else if (15 < x) {
+            }else if (20 < x) {
                 NSLog(@"right");
-                // [self right];
                 [self judge:2];
             }else {
                 NSLog(@"undefined");
@@ -214,34 +203,6 @@
         }
     }
 }
-
-//- (void)left
-//{
-//    if([currentArray[0] intValue]  == 1){
-//        hanteiLabel.text = @"せいこう";
-//    }else{
-//        hanteiLabel.text = @"しっぱい";
-//    }
-//}
-//
-//- (void)center
-//{
-//    if(currentArray[1] == 1){
-//        hanteiLabel.text = @"せいこう";
-//    }else{
-//        hanteiLabel.text = @"しっぱい";
-//    }
-//    
-//}
-//
-//- (void)right
-//{
-//    if(currentArray[3] == 1){
-//        hanteiLabel.text = @"せいこう";
-//    }else{
-//        hanteiLabel.text = @"しっぱい";
-//    }
-//}
 
 - (void)judge:(int)direction
 {
@@ -256,7 +217,7 @@
         }else{
             hanteiLabel.text = @"しっぱい";
             sakuraJudgeImageView.image = [UIImage imageNamed:@"saitenai.png"];
-            [self susumu];
+            
         }
     }
 }
