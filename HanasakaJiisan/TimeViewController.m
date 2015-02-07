@@ -188,13 +188,13 @@
     
     if (pan.state == UIGestureRecognizerStateEnded) {
         if (y < 0) {
-            if (-15 <= x && x <= 20) {
+            if (-25 <= x && x <= 25) {
                 NSLog(@"center");
                 [self judge:1];
-            }else if (-15 > x) {
+            }else if (-25 > x) {
                 NSLog(@"left");
                 [self judge:0];
-            }else if (20 < x) {
+            }else if (25 < x) {
                 NSLog(@"right");
                 [self judge:2];
             }else {
