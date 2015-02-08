@@ -18,8 +18,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
-    
+    countDownLabel.text = @"";
+    UIColor *countDownColor = [UIColor colorWithRed:1.0 green:0.498 blue:0.749 alpha:1.0];
+    countDownLabel.textColor = countDownColor;
+    countDownLabel.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:180];
     
     
     startBt = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -67,30 +69,16 @@
 {
     countdown = countdown - 1;
     if(countdown == 3){
-        CGRect rect = CGRectMake(10, 50, 250, 250);
-        imageView3 = [[UIImageView alloc]initWithFrame:rect];
-        imageView3.image = [UIImage imageNamed:@"3.png"];
-        [self.view addSubview:imageView3];
+        countDownLabel.text = @"3";
     }else if(countdown == 2){
-        CGRect rect = CGRectMake(10, 50, 250, 250);
-        imageView2 = [[UIImageView alloc]initWithFrame:rect];
-        imageView2.image = [UIImage imageNamed:@"2.png"];
-        [self.view addSubview:imageView2];
-        [imageView3 removeFromSuperview];
+        countDownLabel.text = @"2";
     }else if(countdown == 1){
-        CGRect rect = CGRectMake(10, 50, 250, 250);
-        imageView1 = [[UIImageView alloc]initWithFrame:rect];
-        imageView1.image = [UIImage imageNamed:@"1.png"];
-        [self.view addSubview:imageView1];
-        [imageView2 removeFromSuperview];
+        countDownLabel.text = @"1";
     }else if (countdown == 0 ) {
-        [imageView1 removeFromSuperview];
-        CGRect rect = CGRectMake(10, 50, 250, 250);
-        imageViewStart = [[UIImageView alloc]initWithFrame:rect];
-        imageViewStart.image = [UIImage imageNamed:@"start_sign.png"];
-        [self.view addSubview:imageViewStart];
+        countDownLabel.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:100];
+        countDownLabel.text = @"START";
     }else if (countdown == -1) {
-        [imageViewStart removeFromSuperview];
+        countDownLabel.text = @"";
         [timer invalidate];
         timer = nil;
         [self gameStart];

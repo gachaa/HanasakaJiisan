@@ -13,6 +13,7 @@
 {
     IBOutlet UILabel *hanteiLabel;
     IBOutlet UIImageView *hai;
+    IBOutlet UILabel *countDownLabel;
     
     UIImageView *imageView1;
     UIImageView *imageView2;

@@ -19,7 +19,6 @@
     // Do any additional setup after loading the view.
     
     timeLabel.text = @"" ;
-    countDownLabel.text = @"";
     
     //MARK:StartButtonを作ってるよ
     startBt = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -208,16 +207,17 @@
 {
     if(time >= 0){
         if([currentArray[direction] intValue] == 0){
-            hanteiLabel.text = @"せいこう";
             AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
             appDelegate.timeScore += 1;
             NSLog(@"%d",appDelegate.timeScore);
             sakuraJudgeImageView.image = [UIImage imageNamed:@"saita.png"];
             [self susumu];
         }else{
-            hanteiLabel.text = @"しっぱい";
             sakuraJudgeImageView.image = [UIImage imageNamed:@"saitenai.png"];
-            
+//            NSMutableArray *currentArray2 = (NSMutableArray *)currentArray;
+//            [currentArray2 replaceObjectAtIndex:direction withObject:@"0"];
+//            currentArray = (NSArray *)currentArray2;
+//            currentImageView[direction] =
         }
     }
 }
