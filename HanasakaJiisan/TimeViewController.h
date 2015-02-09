@@ -37,8 +37,6 @@
     
     NSArray *currentArray;
     NSArray *nextArray;
-    
-    int tokuten;
 }
 
 
