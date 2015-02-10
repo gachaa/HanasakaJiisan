@@ -20,7 +20,6 @@
     UIImageView *imageView3;
     UIImageView *imageViewStart;
     
-    
     NSTimer *timer;
     float time;
     int countdown;
