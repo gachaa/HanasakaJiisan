@@ -11,6 +11,7 @@
 
 @interface TimeViewController : UIViewController
 {
+    
     IBOutlet UILabel *timeLabel;
     IBOutlet UIImageView *hai;
     
