@@ -31,7 +31,7 @@
     
     // いままでのランキングを取得
     //ranking = (NSMutableArray *)[userDefaults arrayForKey:@"ranking"]; //userDefaultsに入ってる配列は、全部NSArrayになっちゃう
-    ranking = [NSMutableArray arrayWithArray:[userDefaults arrayForKey:@"ranking"]];
+    ranking = [NSMutableArray arrayWithArray:[userDefaults arrayForKey:@"ranking-time"]];
     
     // 最初は、0の配列を用意
     if (ranking == nil || ranking.count == 0) { // rankingの配列の中が空
@@ -52,11 +52,6 @@
         }
     }
     
-    // NSLog(@"added : %@", ranking);
-    
-    // NSLog(@"get : %@", ranking);
-    // NSArray *ranking_ = @[@12, @11, @9, @8, @7];
-    
     // ラベルに表示
     for (int i = 0; i < 5; i++) {
         int score = [ranking[i] intValue];
@@ -72,7 +67,7 @@
     NSLog(@"new : %@", newRanking);
     
     // 保存
-    [userDefaults setObject:newRanking forKey:@"ranking"];
+    [userDefaults setObject:newRanking forKey:@"ranking-time"];
     
 }
 
@@ -186,9 +181,16 @@
 //    [userDefaults removeObjectForKey:@"rank3"];
 //    [userDefaults removeObjectForKey:@"rank4"];
 //    [userDefaults removeObjectForKey:@"rank5"];
-    [userDefaults removeObjectForKey:@"ranking"];
+    [userDefaults removeObjectForKey:@"ranking-time"];
 }
 
+- (IBAction)retry {
+    [self dismissViewControllerAnimated:true completion:nil];
+}
+
+- (IBAction)top {
+    [self.presentingViewController.presentingViewController dismissViewControllerAnimated:false completion:nil];
+}
 
 
 

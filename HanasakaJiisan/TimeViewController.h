@@ -15,6 +15,8 @@
     IBOutlet UILabel *timeLabel;
     IBOutlet UIImageView *hai;
     
+    UILabel *timeupLabel;
+    
     UIImageView *imageView1;
     UIImageView *imageView2;
     UIImageView *imageView3;
@@ -36,8 +38,8 @@
     IBOutlet UIImageView *nextImageView2;
     IBOutlet UIImageView *nextImageView3;
     
-    NSArray *currentArray;
-    NSArray *nextArray;
+    NSMutableArray *currentArray;
+    NSMutableArray *nextArray;
 }
 
 

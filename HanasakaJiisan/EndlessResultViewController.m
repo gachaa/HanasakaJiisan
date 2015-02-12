@@ -25,7 +25,7 @@
     
     // いままでのランキングを取得
     // ranking = (NSMutableArray *)[userDefaults arrayForKey:@"ranking"]; //userDefaultsに入ってる配列は、全部NSArrayになっちゃう
-    ranking = [NSMutableArray arrayWithArray:[userDefaults arrayForKey:@"ranking"]];
+    ranking = [NSMutableArray arrayWithArray:[userDefaults arrayForKey:@"ranking-result"]];
     
     // 最初は、0の配列を用意
     if (ranking == nil || ranking.count == 0) { // rankingの配列の中が空
@@ -62,7 +62,7 @@
     NSLog(@"new : %@", newRanking);
     
     // 保存
-    [userDefaults setObject:newRanking forKey:@"ranking"];
+    [userDefaults setObject:newRanking forKey:@"ranking-result"];
     
     // [self ranking];
 
@@ -99,5 +99,14 @@
 //        ((UILabel *)labels[i]).text = [NSString stringWithFormat:@"%d", score];
 //    }
 //}
+
+- (IBAction)retry {
+    [self dismissViewControllerAnimated:true completion:nil];
+}
+
+- (IBAction)top {
+    
+    [self.presentingViewController.presentingViewController dismissViewControllerAnimated:NO completion:nil];
+}
 
 @end

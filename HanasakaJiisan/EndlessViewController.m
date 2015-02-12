@@ -21,7 +21,6 @@
     countDownLabel.text = @"";
     UIColor *countDownColor = [UIColor colorWithRed:1.0 green:0.498 blue:0.749 alpha:1.0];
     countDownLabel.textColor = countDownColor;
-    countDownLabel.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:180];
     
     
     startBt = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -37,10 +36,21 @@
     
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
     [hai addGestureRecognizer:panGesture];
+
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     appDelegate.endlessScore = 0;
+    
+    countDownLabel.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:180];
+    
+    [self resetViews];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -90,8 +100,7 @@
     [imageViewStart removeFromSuperview];
     currentArray = [self makeTrees];
     nextArray = [self makeTrees];
-    [self showTrees:currentArray and:nextArray];
-    
+    [self showTrees];
 }
 
 // 1,0,1とか1,1,0とかの配列を作る
@@ -104,15 +113,29 @@
 }
 
 // currentImageViewにtreeImageWithNumberでセットされた画像を入れる
-- (void)showTrees:(NSArray *)current and:(NSArray *)next
+- (void)showTrees
 {
-    currentImageView1.image = [self treeImageWithNumber:[current[0] intValue]];
-    currentImageView2.image = [self treeImageWithNumber:[current[1] intValue]];
-    currentImageView3.image = [self treeImageWithNumber:[current[2] intValue]];
+    currentImageView1.image = [self treeImageWithNumber:[currentArray[0] intValue]];
+    currentImageView2.image = [self treeImageWithNumber:[currentArray[1] intValue]];
+    currentImageView3.image = [self treeImageWithNumber:[currentArray[2] intValue]];
     
-    nextImageView1.image = [self treeImageWithNumber:[next[0] intValue]];
-    nextImageView2.image = [self treeImageWithNumber:[next[1] intValue]];
-    nextImageView3.image = [self treeImageWithNumber:[next[2] intValue]];
+    nextImageView1.image = [self treeImageWithNumber:[nextArray[0] intValue]];
+    nextImageView2.image = [self treeImageWithNumber:[nextArray[1] intValue]];
+    nextImageView3.image = [self treeImageWithNumber:[nextArray[2] intValue]];
+}
+
+- (void)resetViews
+{
+    hanteiLabel.text = @"";
+    sakuraJudgeImageView.image = nil;
+    startBt.hidden = NO;
+    
+    currentImageView1.image = nil;
+    currentImageView2.image = nil;
+    currentImageView3.image = nil;
+    nextImageView1.image = nil;
+    nextImageView2.image = nil;
+    nextImageView3.image = nil;
 }
 
 //　treeImgeWithNumberにnumberの値によって画像を入れる
@@ -186,7 +209,7 @@
 {
     currentArray = nextArray;
     nextArray = [self makeTrees];
-    [self showTrees:currentArray and:nextArray];
+    [self showTrees];
 }
 
 - (void)modalERVC

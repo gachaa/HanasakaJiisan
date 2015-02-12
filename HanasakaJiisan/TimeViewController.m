@@ -18,8 +18,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    timeLabel.text = @"" ;
-    
     //MARK:StartButtonを作ってるよ
     startBt = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     startBt.center = CGPointMake(100,200);
@@ -30,14 +28,27 @@
                 action:@selector(start)
       forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:startBt];
+}
 
-    
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    appDelegate.TimeScore = 0;
+    appDelegate.timeScore = 0;
     
+    timeLabel.text = @"" ;
+    
+    startBt.hidden = NO;
+    timeupLabel.text = @"";
+    timer = nil;
+    sakuraJudgeImageView.image = nil;
+    
+    //countDownLabel.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:180];
+    
+    [self resetViews];
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -123,9 +134,8 @@
         [self performSelector:@selector(modalTRVC)
                    withObject:nil
                    afterDelay:1.5];
-        UILabel *timeupLabel = [[UILabel alloc] initWithFrame:(CGRectMake(50, 50, 200, 100))];
+        timeupLabel = [[UILabel alloc] initWithFrame:(CGRectMake(50, 50, 200, 100))];
         timeupLabel.text = @"タイムアップ！";
-        [self.view addSubview:timeupLabel];
     }
 }
 
@@ -139,14 +149,14 @@
     currentArray = [self makeTrees];
     nextArray = [self makeTrees];
     // NSArray *trees = @[[NSNumber numberWithInt:1], [NSNumber numberWithInt:2], [NSNumber numberWithInt:3]];
-    [self showTrees:currentArray and:nextArray];
+    [self showTrees];
     UIPanGestureRecognizer* panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
     [hai addGestureRecognizer:panGesture];
 
 }
 
 // 1,0,1とか1,1,0とかの配列を作る
-- (NSArray *)makeTrees
+- (NSMutableArray *)makeTrees
 {
     NSMutableArray *array = [NSMutableArray arrayWithArray:@[@1, @1, @1]];
     int position = arc4random_uniform(3); // 0~2
@@ -155,15 +165,15 @@
 }
 
 // currentImageViewにtreeImageWithNumberでセットされた画像を入れる
-- (void)showTrees:(NSArray *)current and:(NSArray *)next
+- (void)showTrees
 {
-    currentImageView1.image = [self treeImageWithNumber:[current[0] intValue]];
-    currentImageView2.image = [self treeImageWithNumber:[current[1] intValue]];
-    currentImageView3.image = [self treeImageWithNumber:[current[2] intValue]];
+    currentImageView1.image = [self treeImageWithNumber:[currentArray[0] intValue]];
+    currentImageView2.image = [self treeImageWithNumber:[currentArray[1] intValue]];
+    currentImageView3.image = [self treeImageWithNumber:[currentArray[2] intValue]];
     
-    nextImageView1.image = [self treeImageWithNumber:[next[0] intValue]];
-    nextImageView2.image = [self treeImageWithNumber:[next[1] intValue]];
-    nextImageView3.image = [self treeImageWithNumber:[next[2] intValue]];
+    nextImageView1.image = [self treeImageWithNumber:[nextArray[0] intValue]];
+    nextImageView2.image = [self treeImageWithNumber:[nextArray[1] intValue]];
+    nextImageView3.image = [self treeImageWithNumber:[nextArray[2] intValue]];
 }
 
 //　treeImgeWithNumberにnumberの値によって画像を入れる
@@ -206,6 +216,8 @@
 - (void)judge:(int)direction
 {
     if(time >= 0){
+//        currentArray[direction] = @(1 - [currentArray[direction] intValue]); // 反転
+        
         if([currentArray[direction] intValue] == 0){
             AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
             appDelegate.timeScore += 1;
@@ -227,7 +239,18 @@
 {
     currentArray = nextArray;
     nextArray = [self makeTrees];
-    [self showTrees:currentArray and:nextArray];
+    [self showTrees];
+}
+
+- (void)resetViews
+{
+    currentImageView1.image = nil;
+    currentImageView2.image = nil;
+    currentImageView3.image = nil;
+    nextImageView1.image = nil;
+    nextImageView2.image = nil;
+    nextImageView3.image = nil;
+    
 }
 
 
