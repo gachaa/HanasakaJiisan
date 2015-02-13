@@ -19,6 +19,7 @@
     // Do any additional setup after loading the view.
     
     userDefaults = [NSUserDefaults standardUserDefaults];
+    
 
     // ラベルを配列にまとめる
     labels = @[rank1Label, rank2Label, rank3Label, rank4Label, rank5Label];
@@ -35,6 +36,8 @@
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     tokuten = appDelegate.endlessScore;
     
+    scoreLabel.text = [NSString stringWithFormat:@"%d",tokuten];
+    
     // 得点を更新
     for (int i = 0; i < 5; i++) {
         int score = [ranking[i] intValue];
@@ -43,7 +46,6 @@
             break; //for文を出る
         }
     }
-    
     
     // ラベルに表示
     for (int i = 0; i < 5; i++) {
