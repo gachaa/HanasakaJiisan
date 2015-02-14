@@ -16,6 +16,7 @@
     IBOutlet UIImageView *hai;
     
     UILabel *timeupLabel;
+    IBOutlet UILabel *countDownLabel;
     
     UIImageView *imageView1;
     UIImageView *imageView2;
@@ -33,7 +34,6 @@
     IBOutlet UIImageView *currentImageView1;
     IBOutlet UIImageView *currentImageView2;
     IBOutlet UIImageView *currentImageView3;
-    
     IBOutlet UIImageView *nextImageView1;
     IBOutlet UIImageView *nextImageView2;
     IBOutlet UIImageView *nextImageView3;

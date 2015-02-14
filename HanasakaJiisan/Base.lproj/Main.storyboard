@@ -67,7 +67,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MPg-Dw-rII">
                                 <rect key="frame" x="0.0" y="10" width="300" height="130"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nohara3.png" translatesAutoresizingMaskIntoConstraints="NO" id="ijV-cN-cfH">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nohara.png" translatesAutoresizingMaskIntoConstraints="NO" id="ijV-cN-cfH">
                                 <rect key="frame" x="0.0" y="117" width="375" height="550"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="はんてい" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCX-Vb-MID">
@@ -97,8 +97,8 @@
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hai5.png" translatesAutoresizingMaskIntoConstraints="NO" id="ePq-0N-vFN">
                                 <rect key="frame" x="137" y="512" width="100" height="105"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxb-Xa-08v">
-                                <rect key="frame" x="-3" y="287" width="380" height="190"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="count down" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxb-Xa-08v">
+                                <rect key="frame" x="0.0" y="300" width="375" height="190"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -232,7 +232,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nohara3.png" translatesAutoresizingMaskIntoConstraints="NO" id="cHN-Yq-Kgb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nohara.png" translatesAutoresizingMaskIntoConstraints="NO" id="cHN-Yq-Kgb">
                                 <rect key="frame" x="0.0" y="117" width="375" height="550"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Teq-Kc-Nvd">
@@ -265,12 +265,19 @@
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hai5.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Cq-OU-RTW">
                                 <rect key="frame" x="137" y="533" width="100" height="105"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="cout down" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6I-pG-UWx">
+                                <rect key="frame" x="0.0" y="300" width="375" height="190"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="cKH-H5-MwA"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="countDownLabel" destination="M6I-pG-UWx" id="eb6-Iz-mpI"/>
                         <outlet property="currentImageView1" destination="fto-0t-eHj" id="Np6-op-HXT"/>
                         <outlet property="currentImageView2" destination="zbE-BQ-4NZ" id="f94-mC-8zM"/>
                         <outlet property="currentImageView3" destination="zBj-EH-D12" id="J8d-ao-yAJ"/>
@@ -425,6 +432,6 @@
     </scenes>
     <resources>
         <image name="hai5.png" width="140" height="140"/>
-        <image name="nohara3.png" width="600" height="800"/>
+        <image name="nohara.png" width="375" height="550"/>
     </resources>
 </document>
