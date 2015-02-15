@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		591DC49A1A67C37200B21DD3 /* EndlessResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 591DC4991A67C37200B21DD3 /* EndlessResultViewController.m */; };
-		591DC4AA1A6FE20E00B21DD3 /* nohara3.png in Resources */ = {isa = PBXBuildFile; fileRef = 591DC4A91A6FE20E00B21DD3 /* nohara3.png */; };
 		591DC4AE1A6FE39300B21DD3 /* off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 591DC4AC1A6FE39300B21DD3 /* off@2x.png */; };
 		591DC4AF1A6FE39300B21DD3 /* on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 591DC4AD1A6FE39300B21DD3 /* on@2x.png */; };
 		591E64881A7FB40C006D4A8C /* saita@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 591E64861A7FB40C006D4A8C /* saita@2x.png */; };
@@ -45,7 +44,6 @@
 /* Begin PBXFileReference section */
 		591DC4981A67C37200B21DD3 /* EndlessResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndlessResultViewController.h; sourceTree = "<group>"; };
 		591DC4991A67C37200B21DD3 /* EndlessResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndlessResultViewController.m; sourceTree = "<group>"; };
-		591DC4A91A6FE20E00B21DD3 /* nohara3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nohara3.png; path = images/nohara3.png; sourceTree = "<group>"; };
 		591DC4AC1A6FE39300B21DD3 /* off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "off@2x.png"; path = "images/off@2x.png"; sourceTree = "<group>"; };
 		591DC4AD1A6FE39300B21DD3 /* on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "on@2x.png"; path = "images/on@2x.png"; sourceTree = "<group>"; };
 		591E64861A7FB40C006D4A8C /* saita@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "saita@2x.png"; path = "images/saita@2x.png"; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 				599FB8181A8F776000270A24 /* nohara@2x.png */,
 				591E64871A7FB40C006D4A8C /* saitenai@2x.png */,
 				591E64861A7FB40C006D4A8C /* saita@2x.png */,
-				591DC4A91A6FE20E00B21DD3 /* nohara3.png */,
 				59B6CE9F1A8501200044489C /* 1@2x.png */,
 				59B6CEA01A8501200044489C /* 2@2x.png */,
 				59B6CEA11A8501200044489C /* 3@2x.png */,
@@ -267,7 +264,6 @@
 			files = (
 				59B6CEA41A8501200044489C /* 3@2x.png in Resources */,
 				59EB6DB81A20D42C002A1AF1 /* Main.storyboard in Resources */,
-				591DC4AA1A6FE20E00B21DD3 /* nohara3.png in Resources */,
 				59B6CEA21A8501200044489C /* 1@2x.png in Resources */,
 				595171CB1A1E06E70063270D /* LaunchScreen.xib in Resources */,
 				591E64881A7FB40C006D4A8C /* saita@2x.png in Resources */,
