@@ -24,6 +24,7 @@
 		59B6CEA31A8501200044489C /* 2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59B6CEA01A8501200044489C /* 2@2x.png */; };
 		59B6CEA41A8501200044489C /* 3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59B6CEA11A8501200044489C /* 3@2x.png */; };
 		59B6CEA61A8501280044489C /* start@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59B6CEA51A8501280044489C /* start@2x.png */; };
+		59E801351A94E06E00492FAB /* top1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E801341A94E06E00492FAB /* top1@2x.png */; };
 		59EB6DAD1A1F9B1C002A1AF1 /* TimeResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59EB6DAC1A1F9B1C002A1AF1 /* TimeResultViewController.m */; };
 		59EB6DB01A1F9B8F002A1AF1 /* RuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59EB6DAF1A1F9B8F002A1AF1 /* RuleViewController.m */; };
 		59EB6DB81A20D42C002A1AF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59EB6DB61A20D42C002A1AF1 /* Main.storyboard */; };
@@ -66,6 +67,7 @@
 		59B6CEA01A8501200044489C /* 2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "2@2x.png"; path = "images/2@2x.png"; sourceTree = "<group>"; };
 		59B6CEA11A8501200044489C /* 3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "3@2x.png"; path = "images/3@2x.png"; sourceTree = "<group>"; };
 		59B6CEA51A8501280044489C /* start@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "start@2x.png"; path = "images/start@2x.png"; sourceTree = "<group>"; };
+		59E801341A94E06E00492FAB /* top1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "top1@2x.png"; path = "images/top1@2x.png"; sourceTree = "<group>"; };
 		59EB6DAB1A1F9B1C002A1AF1 /* TimeResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeResultViewController.h; sourceTree = "<group>"; };
 		59EB6DAC1A1F9B1C002A1AF1 /* TimeResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeResultViewController.m; sourceTree = "<group>"; };
 		59EB6DAE1A1F9B8F002A1AF1 /* RuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuleViewController.h; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		591DC4AB1A6FE22000B21DD3 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				59E801341A94E06E00492FAB /* top1@2x.png */,
 				599FB8181A8F776000270A24 /* nohara@2x.png */,
 				591E64871A7FB40C006D4A8C /* saitenai@2x.png */,
 				591E64861A7FB40C006D4A8C /* saita@2x.png */,
@@ -262,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59E801351A94E06E00492FAB /* top1@2x.png in Resources */,
 				59B6CEA41A8501200044489C /* 3@2x.png in Resources */,
 				59EB6DB81A20D42C002A1AF1 /* Main.storyboard in Resources */,
 				59B6CEA21A8501200044489C /* 1@2x.png in Resources */,
